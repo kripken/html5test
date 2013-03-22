@@ -123,10 +123,10 @@ body {
 	float: right; 
 	display: block;
 	width: 74px;
-	height: 102px;
+	height: 74px;
 	margin: 16px 0 10px 10px;
-	background: url(/images/html5.png);
-	background-size: 74px 102px;
+	background: url(/images/js.png);
+	background-size: 74px 74px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
