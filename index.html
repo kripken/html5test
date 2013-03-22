@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title data-i18n>The HTML5 test - How well does your browser support HTML5?</title>	
+		<title data-i18n>The Modern JavaScript test - How well does your browser support Modern JavaScript?</title>	
 
 		<meta charset="UTF-8">
 		
@@ -27,8 +27,8 @@
 		<link rel="icon" href="/images/icon.png">
 		<link rel="apple-touch-icon" href="/images/button.png">
 		
-		<meta property="og:title" content="The HTML5 test - How well does your browser support HTML5?" />
-		<meta property="og:description" content="The HTML5 test score is an indication of how well your browser supports the upcoming HTML5 standard and related specifications. How well does your browser support HTML5?" />
+		<meta property="og:title" content="The Modern JavaScript test - How well does your browser support Modern JavaScript?" />
+		<meta property="og:description" content="The Modern JavaScript test score is an indication of how well your browser supports the upcoming ES6 JavaScript standard and related specifications. How well does your browser support Modern JavaScript?" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://html5test.com" />
 		<meta property="og:image" content="http://html5test.com/images/thumbnail.jpg" />
@@ -77,7 +77,7 @@
 		<div id="fb-root"></div>
 
 		<div class='header'>
-			<h1 data-i18n>The HTML5 test <em>&ndash; how well does your browser support HTML5?</em></h1>
+			<h1 data-i18n>The Modern JavaScript test <em>&ndash; how well does your browser support Modern JavaScript?</em></h1>
 			<ul>
 				<li class='selected'><a href='/index.html' data-i18n>Your browser</a></li>
 				<li><a href='/results/desktop.html' data-i18n>Other<span> browser</span>s</a></li>
@@ -110,10 +110,10 @@
 					<span id='html5'></span>
 					
 					<p data-i18n='index-intro-1'>
-						The HTML5 test score is an indication of how well your browser supports the 
-						upcoming HTML5 standard and related specifications. Even though the specification
+						The Modern JavaScript test score is an indication of how well your browser supports the 
+						upcoming ES6 standard and related specifications. Even though the specification
 						isn't finalized yet, all major browser manufacturers are making sure their
-						browser is ready for the future. Find out which parts of HTML5 are already 
+						browser is ready for the future. Find out which parts of Modern JavaScript are already 
 						supported by your browser today and compare the results with other browsers.
 					</p>
 					
@@ -126,22 +126,19 @@
 					</div>
 					
 					<p data-i18n='index-intro-2'>
-						The HTML5 test does not try to test all of the new features offered by HTML5, nor does it try to test the functionality of each feature it does detect. 
+						The Modern JavaScript test does not try to test all of the new features offered by Modern JavaScript, nor does it try to test the functionality of each feature it does detect. 
 						Despite these shortcomings we hope that by quantifying the level of support users and web developers will get an idea of how hard the 
 						browser manufacturers work on improving their browsers and the web as a development platform.
 					</p>
 					
 					<p data-i18n='index-intro-3'>
-						The score is calculated by testing for the many new features of HTML5. Each feature is worth one or more points. Apart from the main HTML5 
+						The score is calculated by testing for the many new features of Modern JavaScript. Each feature is worth one or more points. Apart from the main ES6 
 						specification and other specifications created the W3C HTML Working Group, this test also awards points for supporting related drafts and 
-						specifications. Some of these specifications were initially part of HTML5, but are now further developed by other W3C working groups. 
-						WebGL is also part of this test despite not being developed by the W3C, because it extends the HTML5 canvas element with a 3d context.
+						specifications.
 					</p>
 					
 					<p data-i18n='index-intro-4'>
-						The test also awards bonus points for supporting audio and video codecs and supporting SVG or MathML embedding in a plain HTML document. 
-						These test do not count towards the total score because HTML5 does not specify any required audio or video codec. Also SVG and MathML are 
-						not required by HTML5, the specification only specifies rules for how such content should be embedded inside a plain HTML file.
+            ..
 					</p>
 					
 					<div class='ads'>
@@ -159,7 +156,7 @@
 					</p>
 					
 					<p data-i18n='index-intro-6'> 
-						The HTML5 test is created by Niels Leenheer. Visit my website at <a href='http://rakaz.nl'>rakaz.nl</a> or follow me on <a href='http://twitter.com/rakaz'>twitter</a>.
+						The Modern JavaScript test is created by Alon Zakai, a fork of <a href="http://html5test.com">HTML5 Test</a> by <a href='http://rakaz.nl'>Niels</a> <a href='http://twitter.com/rakaz'>Leenheer</a> (thanks Niels!)
 					</p>
 	
 					<a href="http://www.twitter.com/rakaz"><img src="//twitter-badges.s3.amazonaws.com/follow_me-c.png" alt="Follow rakaz on Twitter"/></a>				
@@ -170,22 +167,13 @@
 		</div>
 		
 		<div class='footer'>
-			<div>
-				<div class='hosting'>
-					<a href='http://sights.nl/en/'><img src='/images/sights.png' width=55 alt='Sights'></a>
-				</div>
-				
+			<div>				
 				<div class='copyright'>
-					<p>Copyright 2010-2012 by Sights</p>
+					<p>HTML5 Test is Copyright 2010-2012 by Sights</p>
 					<p>April, 2012 - version 3.0</p>
 					<p data-i18n='footer'>
-						The HTML5 test is being developed at <a href='http://github.com/NielsLeenheer/html5test'>Github</a>. Please file an issue there if you find any bugs or think of any improvements to this test.
-						Please note that the HTML5 test is not affiliated with the W3C or the HTML5 working group.
+            Disclaimer.
 					</p>
-					
-					<div id='cloudvps'>
-						<a href="http://www.cloudvps.nl" target="_blank" ><b>CloudVPS</b><br> High Availability<br> Cloud Servers</a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -266,62 +254,6 @@
 
 					this.parent = parent;
 					this.options = options;
-					
-					this.parent.innerHTML +=
-						"<div id='share' style='opacity:0'>" +
-						
-						"<div id='twitter'>" +
-						"<a href='https://twitter.com/share' class='twitter-share-button' " +
-							"data-url='http://html5test.com' " +
-							"data-related='rakaz' " +
-							"data-text='" + this.options.browser + " scored " + this.options.score + "+" + this.options.bonus + " points. How well does your browser support HTML5?' " + 
-							"data-lang='en' "+
-							"data-count='vertical'"+
-							">Tweet</a>" +
-						"</div>" +
-
-						"<div id='facebook'>" +
-						"<div class='fb-like' " +
-							"data-href='http://html5test.com' " + 
-							"data-send='false' " + 
-							"data-layout='box_count' " +
-							"data-width='60' " +
-							"data-show-faces='false'" +
-							"></div>" +
-						"</div>" +
-
-						"<div id='google'>" +
-						"<div class='g-plusone' " +
-							"data-href='http://html5test.com' " + 
-							"data-size='tall'" +
-							"></div>" +
-						"</div>" +
-						
-						"</div>";
-						
-					window.setTimeout(function() {
-						var e = document.getElementById('share');
-						e.style.opacity = '';
-					}, 1000);
-				
-					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))
-					{js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
-					(document,"script","twitter-wjs");
-
-					(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=202643099847776";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
-					
-					
-					(function() {
-					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-					po.src = 'https://apis.google.com/js/plusone.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-					})();
 				}
 			}
 
