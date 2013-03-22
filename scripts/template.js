@@ -1,7 +1,7 @@
 
 
 (function() {
-	window.t = function(s) { return (translation[s] ? translation[s] : s); };
+	window.t = function(s) { return ((typeof translation !== 'undefined' && translation[s]) ? translation[s] : s); };
 	
 	if(document.addEventListener) {
 	    document.addEventListener("DOMContentLoaded", function()
