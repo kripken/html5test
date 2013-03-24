@@ -503,6 +503,15 @@ Test = (function() {
     }
   }
 
+  function tryFunc(str) {
+    try {
+      var f = new Function(str);
+      return f();
+    } catch(e) {
+      return e;
+    }
+  }
+
 	function testSugar (results) { this.initialize(results) }			
 	testSugar.prototype = {
 		initialize: function(results) {
@@ -525,6 +534,12 @@ Test = (function() {
 			this.section.setItem({
 				id:		'arrow functions',
 				passed:	tryEval('(x => 2*x)(10)') == 20,
+				value: 	10
+			});
+
+			this.section.setItem({
+				id: 'class',
+				passed:	tryEval('class TestClass { }; var x = new TestClass(); return 5') == 5,
 				value: 	10
 			});
 		}

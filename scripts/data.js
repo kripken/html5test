@@ -15,6 +15,10 @@ var tests = [
         id:    'arrow functions',
         name:   'Short arrow function syntax ( => )',
         url:    'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax'
+      }, {
+        id: 'class',
+        name: 'Class syntax',
+        url: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes'
       }, 
       '<em>Notice.</em>',
     ],
