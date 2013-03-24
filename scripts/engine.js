@@ -520,6 +520,12 @@ Test = (function() {
 				passed:	jsonCompare(tryEval('a = [5, 6], [1, 2, ...a]'), [1, 2, 5, 6]),
 				value: 	5
 			});
+
+			this.section.setItem({
+				id:		'arrow functions',
+				passed:	tryEval('(x => 2*x)(10)') == 20,
+				value: 	10
+			});
 		}
 	};
 	
