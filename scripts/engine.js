@@ -506,7 +506,7 @@ Test = (function() {
 	testSugar.prototype = {
 		initialize: function(results) {
 			this.section = results.getSection({
-				id:		'sugar'
+				id:		'ES6'
 			});
 			
 			this.section.setItem({

@@ -1,7 +1,7 @@
 var tests = [
   {
-    id:    'sugar',
-    name:  'Syntactic sugar',
+    id:    'ES6',
+    name:  'ECMAScript 6 (ES6)',
     items:  [{
       id:    'spread array',
       name:   'Spread array (...) operator', 
