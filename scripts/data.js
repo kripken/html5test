@@ -25,6 +25,11 @@ var tests = [
     name: 'asm.js',
     items: [
       {
+        id: 'asm.js optimization',
+        name: 'asm.js optimization',
+        url: 'http://asmjs.org',
+      },
+      {
         id: 'Math.imul',
         name: 'Math.imul',
         url: 'https://mail.mozilla.org/pipermail/es-discuss/2012-November/026126.html',
