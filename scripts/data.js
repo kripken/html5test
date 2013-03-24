@@ -20,5 +20,16 @@ var tests = [
     ],
   },
   'Experimental',
+  {
+    id: 'asm.js',
+    name: 'asm.js',
+    items: [
+      {
+        id: 'Math.imul',
+        name: 'Math.imul',
+        url: 'https://mail.mozilla.org/pipermail/es-discuss/2012-November/026126.html',
+      },
+    ],
+  },
 ];
 

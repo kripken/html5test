@@ -6,7 +6,8 @@ Test = (function() {
 	function test (c) { this.initialize(c) }
 	test.prototype = {
 		suites: [ 
-			[ testSugar ]
+			[ testSugar ],
+			[ testAsm ]
 		],
 		
 		initialize: function(c) {					
@@ -525,6 +526,21 @@ Test = (function() {
 				id:		'arrow functions',
 				passed:	tryEval('(x => 2*x)(10)') == 20,
 				value: 	10
+			});
+		}
+  };
+
+	function testAsm (results) { this.initialize(results) }			
+	testAsm.prototype = {
+		initialize: function(results) {
+			this.section = results.getSection({
+				id:		'asm.js'
+			});
+			
+			this.section.setItem({
+				id:		'Math.imul',
+				passed:	tryEval('!!Math.imul'),
+				value: 	5
 			});
 		}
 	};
