@@ -548,6 +548,12 @@ Test = (function() {
 				passed:	tryFunc('let x = 10; { let x = 20; } return x*x') == 100,
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'const',
+				passed:	tryFunc('const x = 10; return x*10') == 100,
+				value: 	10
+			});
 		}
   };
 
@@ -564,11 +570,12 @@ Test = (function() {
         var asm = new Function("(function(global, env, buffer) { '" + (asm ? '' : 'z') + "use asm'; var HEAP32 = new global.Int32Array(buffer); function main() { var f = 0, t = 0, i = 0; while ((t|0) < 300) { i = 0; while ((i|0) < 1024*1024) { HEAP32[i>>2] = ((HEAP32[(i & 255)>>2]|0) + i + f)&255; i = (i+1)|0; } i = 0; while ((i|0) < 1024*1024) { f = (f + (HEAP32[i>>2] & 1))|0; i = (i+1)|0; } f = f&255; t = (t+1)|0; } return f|0; } return main; })({ 'Int32Array': Int32Array }, {}, buffer1.buffer); return asm1;");
         return asm;
       }
+      var N = 1000;
       var t = Date.now();
-      for (var i = 0; i < 2000; i++) testAsmAOT(true);
+      for (var i = 0; i < N; i++) testAsmAOT(true);
       var aot = Date.now() - t;
       t = Date.now();
-      for (var i = 0; i < 2000; i++) testAsmAOT(false);
+      for (var i = 0; i < N; i++) testAsmAOT(false);
       var normal = Date.now() - t;
 
 			this.section.setItem({

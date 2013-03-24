@@ -23,6 +23,10 @@ var tests = [
         id: 'let',
         name: 'let',
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:let'
+      }, {
+        id: 'const',
+        name: 'const',
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:const'
       },
       '<em>Notice.</em>',
     ],
@@ -34,7 +38,7 @@ var tests = [
     items: [
       {
         id: 'asm.js optimization',
-        name: 'asm.js optimization',
+        name: 'asm.js AOT optimization',
         url: 'http://asmjs.org',
       },
       {
