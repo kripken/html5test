@@ -19,7 +19,11 @@ var tests = [
         id: 'class',
         name: 'Class syntax',
         url: 'http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes'
-      }, 
+      }, {
+        id: 'let',
+        name: 'let',
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:let'
+      },
       '<em>Notice.</em>',
     ],
   },

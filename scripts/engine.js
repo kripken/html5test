@@ -539,7 +539,13 @@ Test = (function() {
 
 			this.section.setItem({
 				id: 'class',
-				passed:	tryEval('class TestClass { }; var x = new TestClass(); return 5') == 5,
+				passed:	tryFunc('class TestClass { }; var x = new TestClass(); return 5') == 5,
+				value: 	10
+			});
+
+			this.section.setItem({
+				id: 'let',
+				passed:	tryFunc('let x = 10; { let x = 20; } return x*x') == 100,
 				value: 	10
 			});
 		}
