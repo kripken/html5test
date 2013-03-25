@@ -31,6 +31,10 @@ var tests = [
         id: 'default parameters',
         name: 'Default function parameters',
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values'
+      }, {
+        id: 'rest parameters',
+        name: 'Rest parameters',
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters'
       },
       '<em>Notice.</em>',
     ],

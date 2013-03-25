@@ -560,6 +560,12 @@ Test = (function() {
 				passed:	tryEval('(function(x = 10) { return x*x })()') == 100,
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'rest parameters',
+				passed:	jsonCompare(tryEval('(function(x, y, ...others) { return [x, y, others] })(4, 9, 16, 25, 36)'), [4, 9, [16, 25, 36]]),
+				value: 	10
+			});
 		}
   };
 
