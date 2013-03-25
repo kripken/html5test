@@ -572,6 +572,12 @@ Test = (function() {
 				passed:	tryFunc('for (var x of ["hello", "world"]) return x') == 'hello',
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'array comprehensions',
+				passed:	jsonCompare(tryEval('[x*2 for (x of [1,2,3])]'), [2,4,6]),
+				value: 	10
+			});
 		}
   };
 

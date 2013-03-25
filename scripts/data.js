@@ -39,6 +39,10 @@ var tests = [
         id: 'for-of',
         name: 'for-of loop', 
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
+      }, {
+        id: 'array comprehensions',
+        name: 'Array comprehensions', 
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
       }
       //'<em>Notice.</em>',
     ],
