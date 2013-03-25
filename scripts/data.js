@@ -43,6 +43,10 @@ var tests = [
         id: 'array comprehensions',
         name: 'Array comprehensions', 
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions',
+      }, {
+        id: 'generator expressions',
+        name: 'generator expressions', 
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:generator_expressions',
       }
       //'<em>Notice.</em>',
     ],

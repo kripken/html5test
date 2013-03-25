@@ -578,6 +578,12 @@ Test = (function() {
 				passed:	jsonCompare(tryEval('[x*2 for (x of [1,2,3])]'), [2,4,6]),
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'generator expressions',
+				passed:	tryFunc('var x = (x*2 for (x of [1,2,3])); for (var y in x) return y') == 2,
+				value: 	10
+			});
 		}
   };
 
