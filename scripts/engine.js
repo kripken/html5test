@@ -566,6 +566,12 @@ Test = (function() {
 				passed:	jsonCompare(tryEval('(function(x, y, ...others) { return [x, y, others] })(4, 9, 16, 25, 36)'), [4, 9, [16, 25, 36]]),
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'for-of',
+				passed:	tryFunc('for (var x of ["hello", "world"]) return x') == 'hello',
+				value: 	10
+			});
 		}
   };
 

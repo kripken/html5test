@@ -4,14 +4,6 @@ var tests = [
     name:  'ECMAScript 6 (ES6)',
     items:  [
       {
-        id:    'spread array',
-        name:   'Spread array (...) operator', 
-        url:  ''
-      }, {
-        id:    'spread call',
-        name:   'Spread call (...) operator',
-        url:    ''
-      }, {
         id:    'arrow functions',
         name:   'Short arrow function syntax ( => )',
         url:    'http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax'
@@ -35,8 +27,20 @@ var tests = [
         id: 'rest parameters',
         name: 'Rest parameters',
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters'
-      },
-      '<em>Notice.</em>',
+      }, {
+        id:    'spread call',
+        name:   'Spread call (...) operator',
+        url:    ''
+      }, {
+        id:    'spread array',
+        name:   'Spread array (...) operator', 
+        url:  ''
+      }, {
+        id: 'for-of',
+        name: 'for-of loop', 
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:iterators',
+      }
+      //'<em>Notice.</em>',
     ],
   },
   'Experimental',
