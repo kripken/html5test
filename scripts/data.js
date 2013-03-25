@@ -27,6 +27,10 @@ var tests = [
         id: 'const',
         name: 'const',
         url: 'http://wiki.ecmascript.org/doku.php?id=harmony:const'
+      }, {
+        id: 'default parameters',
+        name: 'Default function parameters',
+        url: 'http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values'
       },
       '<em>Notice.</em>',
     ],

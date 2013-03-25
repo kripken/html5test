@@ -554,6 +554,12 @@ Test = (function() {
 				passed:	tryFunc('const x = 10; return x*10') == 100,
 				value: 	10
 			});
+
+			this.section.setItem({
+				id: 'default parameters',
+				passed:	tryEval('(function(x = 10) { return x*x })()') == 100,
+				value: 	10
+			});
 		}
   };
 
